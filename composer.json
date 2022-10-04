@@ -1,0 +1,11 @@
+{
+    "name": "bolideai/tool-cs-fixer",
+    "description": "PHP-CS-Fixer config",
+    "authors": [
+        {
+            "name": "Vitaliy Dubov",
+            "email": "vitaliy.dubov@bolide.ai"
+        }
+    ],
+    "require": {}
+}
