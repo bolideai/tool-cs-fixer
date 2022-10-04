@@ -1,9 +1,9 @@
 <?php
 
 $finder = Symfony\Component\Finder\Finder::create()
-    ->notPath('src/bootstrap/*')
-    ->notPath('src/storage/*')
-    ->notPath('src/vendor/*')
+    ->notPath('/bootstrap/*')
+    ->notPath('/storage/*')
+    ->notPath('/vendor/*')
     ->in([
         __DIR__ . '/app',
         __DIR__ . '/tests',
