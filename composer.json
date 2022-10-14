@@ -1,11 +1,31 @@
 {
     "name": "bolideai/cs-fixer",
-    "description": "PHP-CS-Fixer config",
+    "description": "Bolideai app PHP CS Fixer",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "friendsofphp/php-cs-fixer": "^3.12"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bolideai\\CsFixer\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Vitaliy Dubov",
             "email": "vitaliy.dubov@bolide.ai"
         }
     ],
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bolideai\\CsFixer\\CsFixerServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.10"
+    }
 }
