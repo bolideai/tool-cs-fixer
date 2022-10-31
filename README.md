@@ -1,11 +1,11 @@
 # Bolideai CS-Fixer
 
-## Описание
-#### Простой конфиг и artisan команда для PHP-CS-Fixer
+## Description
+#### Simple config and artisan command for PHP CS fixer
 
-## Документация
-* [Как использовать PHP-CS-Fixer](docs/how-to-use.md)
+## Documentation
+* [How use Bolideai CS fixer](docs/how-to-use.md)
 
-## Автор
-Дубов В.C.
+## Author
+Dubov V.S.
 vitaliy.dubov@bolide.ai
