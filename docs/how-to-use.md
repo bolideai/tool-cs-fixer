@@ -1,59 +1,17 @@
 # PHP CS Fixer
 
-Для того чтобы воспользоваться  PHP CS Fixer вам нужно сделать следующий шаги:
+## Installation
 
-### Если у вас в приложении уже установлен пакет tool-common-microservice версии 1.1.0 и выше:
+### For microservice
+If your application is microservice, install CS fixer via the [tool-common-microservice](https://github.com/bolideai/tool-common-microservice) package. Etherelse install cs-fixer:
 
-1) Установить или обновить зависимости;
-
-```jsx
-composer update  или composer install
-```
-
-2) При необходимости можете опубликовать и отредактировать конфигурацию PHP CS Fixer
-
-```bash
-php artisan vendor:publish
-```
-
-2) Запустить PHP CS Fixer;
-
-```jsx
-php artisan cs:fix
-```
-
-Если не передавать никаких параметров, то будут исправлены следующие папки:
-
-1. app;
-2. tests;
-3. config;
-4. database;
-5. routes;
-
-Так же вы можете указать папки, код к которых вы ходите проверить, папки или пути, если их несколько следует указывать через запятую:
-
-```php
-php artisan cs:fix database,tests,app/Providers
-
-php artisan cs:fix /var/html/domain/app
-```
-
----
-
-### Если у вас не установлен tool-common-microservice:
-
-a) установите tool-common-microservice;
-
-б) установите cs-fixer вручную:
-
-- добавьте в composer.json в раздел require следующую строку:
-
+### For simple application
+If your application is non-microservice, install CS fixer manually:
+1) Add to composer.json following line:
 ```php
 "bolideai/cs-fixer": "^1.0.0"
 ```
-
-- Добавьте (или обновите) внешние репозитории (в обозримом будущем, этого пункта не будет и будет обычная установка composer пакета);
-
+2) Add external repository:
 ```php
 "repositories": [
     {
@@ -61,4 +19,38 @@ a) установите tool-common-microservice;
         "url":  "git@github.com:bolideai/tool-cs-fixer.git"
     }
 ]
+```
+3) Run composer update
+```bash
+composer update bolideai/cs-fixer
+```
+
+### Configuration
+If you want, you can publish and edit a PHP CS Fixer configuration:
+
+```bash
+php artisan vendor:publish
+```
+
+
+### Usage
+Run PHP CS Fixer:
+
+```jsx
+php artisan cs:fix
+```
+
+By default, the following folders will scan and modify:
+
+1. app;
+2. tests;
+3. config;
+4. database;
+5. routes;
+
+Also, you can set folders manually by passing it as an argument. For example
+
+```bash
+php artisan cs:fix database,tests,app/Providers
+php artisan cs:fix /var/html/domain/app
 ```
